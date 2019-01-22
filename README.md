@@ -5,6 +5,12 @@ Search in the consul key/values.
 
 # Installation
 
+Install from patsnap internal repository
+```
+pip install consul-search
+```
+
+Or, you can install from source
 ```
 python setup.py install
 ```
