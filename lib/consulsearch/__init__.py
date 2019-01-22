@@ -1,0 +1,5 @@
+__prog__ = 'consul-search'
+__version__ = '0.1.0'
+__author__ = 'wuwentao'
+__author_email__ = 'wuwentao@patsnap.com'
+__descr__ = 'Search in the consul key/value'

@@ -1,0 +1,12 @@
+consul:
+  # consul host
+  host: "www.consul.com"
+  # consul port
+  port: 80
+  # consul scheme
+  scheme: "http"
+  # consul ACL token
+  token: ""
+search:
+  # default search root
+  root: ""
