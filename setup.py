@@ -7,8 +7,8 @@ sys.path.insert(0, os.path.abspath('lib'))
 from consulsearch import __prog__, __version__, __author__, __author_email__, __descr__
 
 
-# with io.open("README.rst", "rt", encoding="utf8") as f:
-#     readme = f.read()
+with io.open("README.md", "rt", encoding="utf8") as f:
+    readme = f.read()
 
 
 static_setup_params = dict(

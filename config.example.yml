@@ -2,7 +2,7 @@ consul:
   # consul host
   host: "www.consul.com"
   # consul port
-  port: 80
+  port: 8500
   # consul scheme
   scheme: "http"
   # consul ACL token
@@ -10,3 +10,14 @@ consul:
 search:
   # default search root
   root: ""
+  # search results limit
+  limit: 10
+  # result output type, text, json or csv
+  output_type: "text"
+  # cache file
+  cache: ".cache"
+  # cache expire seconds
+  cache_ttl: 300
+log:
+  # log level
+  log_level: "INFO"
