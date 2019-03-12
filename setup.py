@@ -25,7 +25,10 @@ static_setup_params = dict(
     packages=find_packages('lib'),
     package_dir={'': 'lib'},
     install_requires=[
-        'hsettings>=0.1'
+        'hsettings>=0.1',
+        'python-consul',
+        'colorama',
+        'diskcache'
     ],
     entry_points = {
         'console_scripts': [

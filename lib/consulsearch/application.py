@@ -167,8 +167,11 @@ class JsonOutput(BaseOutput):
 
     def output(self, results):
         import json
-        with open(self.out_file, 'w') as fp:
-            json.dump(results, fp, indent=4)
+        if self.out_file:
+            with open(self.out_file, 'w') as fp:
+                json.dump(results, fp, indent=4)
+        else:
+            print(json.dumps(results, indent=4))
 
 
 class CsvOutput(BaseOutput):
@@ -179,3 +182,8 @@ class CsvOutput(BaseOutput):
             return ','.join(item)
         else:
             return str(item)
+
+
+def main():
+    app = Application()
+    app.run()

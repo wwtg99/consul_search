@@ -1,4 +1,5 @@
 import re
+import logging
 from hsettings import Settings
 import consul
 from diskcache import Cache
@@ -95,7 +96,11 @@ class ConsulKvSearch(SearchCache):
             query = re.compile(query)
         res = []
         for d in data:
-            find = self._search_match(d, query)
+            find = False
+            try:
+                find = self._search_match(d, query)
+            except Exception as e:
+                logging.warning('Failed to search in {}, skip'.format(d))
             if find:
                 res.append(d)
                 if len(res) >= self._limit:
@@ -120,7 +125,11 @@ class ConsulKvSearch(SearchCache):
         for d in data:
             if not d[1]:
                 continue
-            find = self._search_match(d[1], query)
+            find = False
+            try:
+                find = self._search_match(d[1], query)
+            except Exception as e:
+                logging.warning('Failed to search in {}, skip'.format(d[1]))
             if find:
                 res.append(d)
                 if len(res) >= self._limit:
