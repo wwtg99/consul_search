@@ -37,7 +37,7 @@ class Application:
                             choices=['keys', 'values'])
         parser.add_argument('-q', '--query', help='query string', required=True)
         parser.add_argument('-e', '--regex', help='query string support regex', action='store_true')
-        parser.add_argument('-l', '--limit', help='query result limits')
+        parser.add_argument('-l', '--limit', help='query result limits', type=int)
         parser.add_argument('-o', '--output-file', help='output file path')
         parser.add_argument('--output-type', help='output type, text, json or csv', choices=['text', 'json', 'csv'],
                             default='text')

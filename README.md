@@ -1,11 +1,11 @@
 Consul Search
 =============
 
-Search in the consul key/values.
+Simple tool to search in the consul key/values.
 
 # Installation
 
-Install from patsnap internal repository
+Install from repository
 ```
 pip install consul-search
 ```
@@ -19,7 +19,9 @@ python setup.py install
 
 Create `config.yml` and change values from `config.example.yml`.
 
-Configuration description please refer to `config.example.yml`
+Configuration description please refer to `config.example.yml`.
+
+Some command line options will be merged with configuration files, the priority is command line options > configuration file > default value.
 
 # Usage
 
